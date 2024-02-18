@@ -1,103 +1,58 @@
 @extends('website.website')
 
 @section('content')
-    <div class="gdlr-core-pbf-wrapper  hp1-col-services" data-skin="Blue Title" id="gdlr-core-wrapper-1">
-        <div class="gdlr-core-pbf-background-wrap"></div>
-        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
-                <div class=" gdlr-core-pbf-wrapper-container-inner gdlr-core-item-mglr clearfix" id="div_1dd7_0">
-                    <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first">
-                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_1">
-                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                <div class="gdlr-core-pbf-element">
-                                    <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr"
-                                        id="div_1dd7_2">
-                                        <div class="gdlr-core-column-service-media gdlr-core-media-image"><img
-                                                src="upload/icon-1.png" alt="" width="40" height="40"
-                                                title="icon-1" /></div>
-                                        <div class="gdlr-core-column-service-content-wrapper">
-                                            <div class="gdlr-core-column-service-title-wrap">
-                                                <h3 class="gdlr-core-column-service-title gdlr-core-skin-title"
-                                                    id="h3_1dd7_0">Fasilitas Kampus</h3>
-                                                <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption"
-                                                    id="div_1dd7_3">Info Lebih Lanjut</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+    {{-- berita --}}
+    @if ($articles->count() > 0)
+        <div class="gdlr-core-pbf-wrapper " style="padding: 80px 0px 30px 0px;" data-skin="Blut Title Column Service">
+            <div class="gdlr-core-pbf-background-wrap"></div>
+            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                    <div class="gdlr-core-pbf-element">
+                        <div class="gdlr-core-blog-item gdlr-core-item-pdb clearfix  gdlr-core-style-blog-column"
+                            style="padding-bottom: 0px ;">
+                            <div class="gdlr-core-block-item-title-wrap  gdlr-core-left-align gdlr-core-item-mglr"
+                                style="margin-bottom: 40px ;">
+                                <div class="gdlr-core-block-item-title-inner clearfix">
+                                    <h3 class="gdlr-core-block-item-title"
+                                        style="font-size: 24px ;font-style: normal ;text-transform: none ;letter-spacing: 0px ;color: #163269 ;">
+                                        Berita Terbaru</h3>
+                                    <div class="gdlr-core-block-item-title-divider"
+                                        style="font-size: 24px ;border-bottom-width: 2px ;"></div>
+                                </div><a class="gdlr-core-block-item-read-more" href="/news" target="_self"
+                                    style="color: #3db166 ;">Lihat Semua Berita</a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="gdlr-core-pbf-column gdlr-core-column-15" id="gdlr-core-column-1">
-                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_4">
-                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                <div class="gdlr-core-pbf-element">
-                                    <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr"
-                                        id="div_1dd7_5">
-                                        <div class="gdlr-core-column-service-media gdlr-core-media-image"><img
-                                                src="upload/icon-2.png" alt="" width="44" height="40"
-                                                title="icon-2" /></div>
-                                        <div class="gdlr-core-column-service-content-wrapper">
-                                            <div class="gdlr-core-column-service-title-wrap">
-                                                <h3 class="gdlr-core-column-service-title gdlr-core-skin-title"
-                                                    id="h3_1dd7_1">Sarjana</h3>
-                                                <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption"
-                                                    id="div_1dd7_6">Info Lebih Lanjut</div>
+                            <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
+                                @foreach ($articles as $item)
+                                    <div class="gdlr-core-item-list  gdlr-core-item-pdlr gdlr-core-column-20">
+                                        <div class="gdlr-core-blog-grid ">
+                                            <div
+                                                class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
+                                                <a href="/articles/{{ $item->category->slug }}/{{ $item->slug }}"><img
+                                                        src="{{ $item->cover_photo->thumbUrl }}" width="900"
+                                                        height="500" alt="{{ $item->name }}"
+                                                        style="height: 250px; object-fit: cover" /></a>
+                                            </div>
+                                            <div class="gdlr-core-blog-grid-content-wrap">
+                                                <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span
+                                                        class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a
+                                                            href="/articles/{{ $item->category->slug }}/{{ $item->slug }}">{!! $item->active_from->format('\<\s\t\r\o\n\g\>d\</\s\t\r\o\n\g\> M Y') !!}</a></span><span
+                                                        class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-category"><a
+                                                            href="#" rel="tag">Blog</a></span></div>
+                                                <h3 class="gdlr-core-blog-title gdlr-core-skin-title"
+                                                    style="font-size: 17px ;font-weight: 600 ;letter-spacing: 0px ;"><a
+                                                        href="/articles/{{ $item->category->slug }}/{{ $item->slug }}">{!! $item->name !!}</a>
+                                                </h3>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gdlr-core-pbf-column gdlr-core-column-15" id="gdlr-core-column-2">
-                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_7">
-                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                <div class="gdlr-core-pbf-element">
-                                    <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr"
-                                        id="div_1dd7_8">
-                                        <div class="gdlr-core-column-service-media gdlr-core-media-image"><img
-                                                src="upload/icon-3.png" alt="" width="44" height="39"
-                                                title="icon-3" /></div>
-                                        <div class="gdlr-core-column-service-content-wrapper">
-                                            <div class="gdlr-core-column-service-title-wrap">
-                                                <h3 class="gdlr-core-column-service-title gdlr-core-skin-title"
-                                                    id="h3_1dd7_2">Unit Kegiatan Mahasiswa</h3>
-                                                <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption"
-                                                    id="div_1dd7_9">Info Lebih Lanjut</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gdlr-core-pbf-column gdlr-core-column-15" id="gdlr-core-column-3">
-                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_10">
-                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                <div class="gdlr-core-pbf-element">
-                                    <div class="gdlr-core-column-service-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-column-service-icon-left gdlr-core-with-caption gdlr-core-item-pdlr"
-                                        id="div_1dd7_11">
-                                        <div class="gdlr-core-column-service-media gdlr-core-media-image"><img
-                                                src="upload/icon-4.png" alt="" width="41" height="41"
-                                                title="icon-4" /></div>
-                                        <div class="gdlr-core-column-service-content-wrapper">
-                                            <div class="gdlr-core-column-service-title-wrap">
-                                                <h3 class="gdlr-core-column-service-title gdlr-core-skin-title"
-                                                    id="h3_1dd7_3">Beasiswa</h3>
-                                                <div class="gdlr-core-column-service-caption gdlr-core-info-font gdlr-core-skin-caption"
-                                                    id="div_1dd7_12">Info Lebih Lanjut </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endif
     <div class="gdlr-core-pbf-wrapper " id="gdlr-core-wrapper-2">
         <div class="gdlr-core-pbf-background-wrap">
             <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_13"
@@ -109,9 +64,12 @@
                     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_14"
                         data-sync-height="height-1">
 
-                        <div class="gdlr-core-pbf-background-wrap">
+                        <div class="gdlr-core-pbf-background-wrap"
+                            style="    display: flex;
+                        justify-content: center;">
                             <a href="#">
-                                <img src="images/home/Rektor.jpg" height="430" alt="" />
+                                <img src="images/home/Rektor.jpg" height="430" alt=""
+                                    style="max-height: 500px; object-fit: cover" />
                             </a>
                             <!-- <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_15" data-parallax-speed="0"></div> -->
                         </div>
@@ -121,10 +79,10 @@
                 </div>
                 <div class="gdlr-core-pbf-column gdlr-core-column-30" id="gdlr-core-column-4">
                     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_16"
-                        data-sync-height="height-1">
+                        data-sync-height="height-1" style="padding-top: 0px">
                         <!-- <div class="gdlr-core-pbf-background-wrap">
-                                                <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_17" data-parallax-speed="0.1"></div>
-                                            </div> -->
+                                                                                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_17" data-parallax-speed="0.1"></div>
+                                                                                    </div> -->
                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
                             <div class="gdlr-core-pbf-element">
                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr"
@@ -140,7 +98,8 @@
                             <div class="gdlr-core-pbf-element">
                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
                                     id="div_1dd7_19">
-                                    <div class="gdlr-core-text-box-item-content" id="div_1dd7_12" style="text-align: justify">
+                                    <div class="gdlr-core-text-box-item-content" id="div_1dd7_12"
+                                        style="text-align: justify">
                                         <p>Politeknik Pengadaan Nasional merupakan Kampus Vokasi pertama di
                                             Indonesia yang semua prodinya diberikan bidang ilmu Pengadaan
                                             Barang/Jasa. Khusus untuk Prodi Manajemen Kontrak Pemerintah mata
@@ -176,55 +135,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="gdlr-core-pbf-wrapper " id="div_1dd7_21">
-                            <div class="gdlr-core-pbf-background-wrap">
-                                <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_22" data-parallax-speed="0.2"></div>
-                            </div>
-                            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                                    <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first">
-                                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                                <div class="gdlr-core-pbf-element">
-                                                    <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-left-align" id="div_1dd7_23">
-                                                        <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" id="div_1dd7_24"><img src="upload/logo-white.png" alt="" width="262" height="35" title="logo-white" /></div>
-                                                    </div>
-                                                </div>
-                                                <div class="gdlr-core-pbf-element">
-                                                    <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" id="div_1dd7_25">
-                                                        <div class="gdlr-core-title-item-title-wrap clearfix">
-                                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_5">About Our University</h3></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gdlr-core-pbf-column gdlr-core-column-40">
-                                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                                <div class="gdlr-core-pbf-element">
-                                                    <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" id="div_1dd7_26">
-                                                        <div class="gdlr-core-text-box-item-content" id="div_1dd7_27">
-                                                            <p>We are one of the largest, most diverse universities in the USA with over 90,000 students in USA, and a further 30,000 studying across 180 countries for Kingster University.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gdlr-core-pbf-element">
-                                                    <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" id="div_1dd7_28">
-                                                        <div class="gdlr-core-text-box-item-content" id="div_1dd7_29">
-                                                            <p>Kingster University was established by John Smith in 1920 for the public benefit and it is recognized globally. Throughout our great history, Kingster has offered access to a wide range of academic opportunities. As a world leader in higher education, the University has pioneered change in the sector.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gdlr-core-pbf-element">
-                                                    <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="#" id="gdlr-core-button-id-66813"><span class="gdlr-core-content" >Read More</span><i class="gdlr-core-pos-right fa fa-long-arrow-right" id="i_1dd7_0"  ></i></a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
     <div class="gdlr-core-pbf-wrapper " id="div_1dd7_30" data-skin="Column Service">
         <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_31"></div>
         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
@@ -237,7 +147,8 @@
                                     id="div_1dd7_32">
                                     <div class="gdlr-core-column-service-media gdlr-core-media-image" id="div_1dd7_33">
                                         <img src="upload/col-icon-1.png" alt="" width="41" height="41"
-                                            title="col-icon-1" /></div>
+                                            title="col-icon-1" />
+                                    </div>
                                     <div class="gdlr-core-column-service-content-wrapper">
                                         <div class="gdlr-core-column-service-title-wrap">
                                             <h3 class="gdlr-core-column-service-title gdlr-core-skin-title"
@@ -263,7 +174,8 @@
                                     id="div_1dd7_35">
                                     <div class="gdlr-core-column-service-media gdlr-core-media-image" id="div_1dd7_36">
                                         <img src="upload/col-icon-2.png" alt="" width="43" height="45"
-                                            title="col-icon-2" /></div>
+                                            title="col-icon-2" />
+                                    </div>
                                     <div class="gdlr-core-column-service-content-wrapper">
                                         <div class="gdlr-core-column-service-title-wrap">
                                             <h3 class="gdlr-core-column-service-title gdlr-core-skin-title"
@@ -289,7 +201,8 @@
                                     id="div_1dd7_38">
                                     <div class="gdlr-core-column-service-media gdlr-core-media-image" id="div_1dd7_39">
                                         <img src="upload/col-icon-3.png" alt="" width="40" height="43"
-                                            title="col-icon-3" /></div>
+                                            title="col-icon-3" />
+                                    </div>
                                     <div class="gdlr-core-column-service-content-wrapper">
                                         <div class="gdlr-core-column-service-title-wrap">
                                             <h3 class="gdlr-core-column-service-title gdlr-core-skin-title"
@@ -315,7 +228,8 @@
                                     id="div_1dd7_41">
                                     <div class="gdlr-core-column-service-media gdlr-core-media-image" id="div_1dd7_42">
                                         <img src="upload/col-icon-4.png" alt="" width="47" height="47"
-                                            title="col-icon-4" /></div>
+                                            title="col-icon-4" />
+                                    </div>
                                     <div class="gdlr-core-column-service-content-wrapper">
                                         <div class="gdlr-core-column-service-title-wrap">
                                             <h3 class="gdlr-core-column-service-title gdlr-core-skin-title"
@@ -467,6 +381,7 @@
             </div>
         </div>
     </div>
+
 
     <div class="gdlr-core-pbf-wrapper " id="div_1dd7_72">
         <div class="gdlr-core-pbf-background-wrap">

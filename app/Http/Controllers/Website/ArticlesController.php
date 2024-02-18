@@ -65,6 +65,8 @@ class ArticlesController extends WebsiteController
         $this->title = $item->name;
 
 
-        return $this->view('articles.show')->with('article', $item);
+        return $this->view('articles.show')
+        ->with('article', $item)
+        ->with('withBanners', false);
     }
 }

@@ -3,7 +3,7 @@
     <div class="kingster-top-bar-container kingster-container ">
         <div class="kingster-top-bar-container-inner clearfix">
             <div class="kingster-top-bar-left kingster-item-pdlr"><i class="fa fa-envelope-open-o" id="i_fd84_0"></i>
-            {{ $settings->email }} <i class="fa fa-phone" id="i_fd84_1"></i> {{ $settings->telephone }}</div>
+                {{ $settings->email ?? '' }} <i class="fa fa-phone" id="i_fd84_1"></i> {{ $settings->telephone ?? '' }}</div>
             <div class="kingster-top-bar-right kingster-item-pdlr">
                 <ul id="kingster-top-bar-menu" class="sf-menu kingster-top-bar-menu kingster-top-bar-right-menu">
                     {{-- <li class="menu-item kingster-normal-menu"><a href="#">Calendar</a></li> --}}
