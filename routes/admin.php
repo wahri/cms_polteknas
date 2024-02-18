@@ -150,6 +150,7 @@ Route::group(['middleware' => ['auth', 'auth.admin'], 'prefix' => 'admin', 'name
         Route::resource('roles', 'RolesController');
 
         Route::resource('settings', 'SettingsController');
+        Route::resource('greeting', 'GreetingController');
 
         Route::resource('templates', 'TemplatesController');
 
