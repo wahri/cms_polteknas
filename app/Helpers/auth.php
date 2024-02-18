@@ -46,6 +46,29 @@ if (!function_exists('profile_image')) {
 
         return '/images/avatars/'.$default_image.'.png';
     }
+    function logo_image()
+    {
+        if (!auth()->check()) {
+            return '/images/logo_small.png';
+        }
+
+        $image = user()->image;
+        if(isset(user()->gender)){
+            $default_image = user()->gender;
+        }else {
+            $default_image = 'default';
+        }
+
+        if ($image && strlen($image) > 5) {
+            if (is_slug_url($image)) {
+                return $image;
+            }
+
+            return '/uploads/images/logo' . $image;
+        }
+
+        return '/images/avatars/'.$default_image.'.png';
+    }
 }
 
 if (!function_exists('token')) {

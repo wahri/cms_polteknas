@@ -3,7 +3,7 @@
     <div class="kingster-top-bar-container kingster-container ">
         <div class="kingster-top-bar-container-inner clearfix">
             <div class="kingster-top-bar-left kingster-item-pdlr"><i class="fa fa-envelope-open-o" id="i_fd84_0"></i>
-                mail@poltekpengadaan.ac.id <i class="fa fa-phone" id="i_fd84_1"></i> +1-3435-2356-222</div>
+            {{ $settings->email }} <i class="fa fa-phone" id="i_fd84_1"></i> {{ $settings->telephone }}</div>
             <div class="kingster-top-bar-right kingster-item-pdlr">
                 <ul id="kingster-top-bar-menu" class="sf-menu kingster-top-bar-menu kingster-top-bar-right-menu">
                     {{-- <li class="menu-item kingster-normal-menu"><a href="#">Calendar</a></li> --}}
@@ -24,9 +24,12 @@
         <div class="kingster-header-container-inner clearfix">
             <div class="kingster-logo  kingster-item-pdlr">
                 <div class="kingster-logo-inner">
-                    <a class="" href="/" title="{{ config('app.name') }}"><img
-                            src="{{ asset('assets/images/logo-with-text.png') }}" alt="Logo Polteknas"
-                            style="height: 61px" /></a>
+                    <a class="" href="/" title="{{ config('app.name') }}">
+                       
+                                 
+                                <img src='/uploads/images/logo/{{ $settings->image }}' alt="Logo Polteknas" style="height: 61px" /></a>
+                            
+                        
                 </div>
             </div>
             <div class="kingster-navigation kingster-item-pdlr clearfix ">

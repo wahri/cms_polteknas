@@ -16,6 +16,7 @@ class Settings extends Model
     protected $table = 'settings';
 
     protected $guarded = ['id'];
+  
 
     /**
      * Validation rules for this model
@@ -46,7 +47,9 @@ class Settings extends Model
         'zoom_level'  => 'nullable',
         'latitude'    => 'nullable',
         'longitude'   => 'nullable',
+        'photo'     => 'max:6000|mimes:jpg,jpeg,png,bmp',
     ];
 
     static public $messages = [];
+    
 }

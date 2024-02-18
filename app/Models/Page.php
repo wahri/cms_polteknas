@@ -84,4 +84,8 @@ class Page extends AdminModel
     {
         return $this->belongsToMany(Banner::class)->isActiveDates()->orderBy('created_at', 'DESC');
     }
+    public function settings()
+    {
+        return $this->belongsToMany(Setting::class)->isActiveDates()->orderBy('created_at', 'DESC');
+    }
 }

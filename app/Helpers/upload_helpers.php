@@ -28,6 +28,11 @@ if (!function_exists('upload_path_images')) {
     {
         return upload_path('images' . DIRECTORY_SEPARATOR . $path . DIRECTORY_SEPARATOR);
     }
+
+    function upload_path_logo_images($path = '')
+    {
+        return upload_path('images' . DIRECTORY_SEPARATOR . $path . DIRECTORY_SEPARATOR);
+    }
 }
 
 if (!function_exists('upload_path_videos')) {

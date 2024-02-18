@@ -15,7 +15,7 @@
                 </button>
             </div>
         </div>
-        <form method="POST" action="{{$selectedNavigation->url . (isset($item)? "/{$item->id}" : '')}}" accept-charset="UTF-8">
+        <form method="POST" action="{{$selectedNavigation->url . (isset($item)? "/{$item->id}" : '')}}" accept-charset="UTF-8" enctype="multipart/form-data">
             <div class="card-body">
 
                 <input name="_token" type="hidden" value="{{ csrf_token() }}">
@@ -256,6 +256,25 @@
                             </div>
                         </div>
                     </div>
+                    <section class="form-group ">
+                                <label>Header Logo</label>
+                                <div class="input-group input-group-sm">
+                                    <input id="photo-label" type="text" class="form-control {{ form_error_class('photo', $errors) }}" readonly placeholder="Browse for an image">
+                                    <input id="photo" style="display: none" accept="{{ get_file_extensions('image') }}" type="file" name="photo" onchange="document.getElementById('photo-label').value = this.value">
+                                    {!! form_error_message('photo', $errors) !!}
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-secondary" onclick="document.getElementById('photo').click();">Browse</button>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            @if($item->image)
+                                <section>
+                                    <img src="/uploads/images/logo/{{ $item->image }}" style="max-height: 300px;">
+                                    <input type="hidden" name="image" value="{{ $item->image }}">
+                                </section>
+                            @endif
                 </fieldset>
 
             </div>
