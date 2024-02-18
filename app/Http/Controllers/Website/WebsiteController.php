@@ -61,6 +61,7 @@ class WebsiteController extends Controller
         return parent::view($path, $data)
             ->with('settings', settings())
             ->with('banners', $banners)
+            ->with('withBanners', true)
             ->with('showPageBanner', $this->showPageBanner)
             ->with('image', $this->image)
             ->with('title', $this->getTitle())
