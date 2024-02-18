@@ -25,11 +25,7 @@
             <div class="kingster-logo  kingster-item-pdlr">
                 <div class="kingster-logo-inner">
                     <a class="" href="/" title="{{ config('app.name') }}">
-                       
-                                 
-                                <img src='/uploads/images/logo/{{ $settings->image }}' alt="Logo Polteknas" style="height: 61px" /></a>
-                            
-                        
+                        <img src="/uploads/images/logo/{{ $settings->image }}" alt="Logo Polteknas" style="height: 61px" ></a>
                 </div>
             </div>
             <div class="kingster-navigation kingster-item-pdlr clearfix ">
