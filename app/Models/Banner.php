@@ -42,7 +42,7 @@ class Banner extends AdminModel
         'action_url'  => 'nullable|max:191',
         'active_from' => 'nullable|date',
         'active_to'   => 'nullable|date',
-        'photo'       => 'required|max:6000|mimes:jpg,jpeg,png,bmp',
+        'photo'       => 'required|max:6000|mimes:jpg,jpeg,png,bmp,mp4',
     ];
 
     /**
