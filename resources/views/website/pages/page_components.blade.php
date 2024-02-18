@@ -50,16 +50,6 @@
                     
                     <div class="gdlr-core-pbf-element">
                         <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
-                            style="padding-bottom: 10px ;">
-                            <div class="gdlr-core-text-box-item-content"
-                                style="font-size: 19px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;">
-                                <p>Accounting or accountancy is the measurement, processing, and communication of
-                                    financial information about economic.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gdlr-core-pbf-element">
-                        <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
                             style="padding-bottom: 15px ;">
                             <div class="gdlr-core-text-box-item-content"
                                 style="font-size: 21px ;text-transform: none ;color: #3db166 ;">
