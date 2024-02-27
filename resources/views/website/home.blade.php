@@ -63,12 +63,12 @@
                 <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first">
                     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " id="div_1dd7_14"
                         data-sync-height="height-1">
-
+                        @foreach ($greeting as $item)
                         <div class="gdlr-core-pbf-background-wrap"
                             style="    display: flex;
                         justify-content: center;">
                             <a href="#">
-                                <img src="images/home/Rektor.jpg" height="430" alt=""
+                                <img src="/uploads/images/logo/{{$item->image}}" height="430" alt=""
                                     style="max-height: 500px; object-fit: cover" />
                             </a>
                             <!-- <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_15" data-parallax-speed="0"></div> -->
@@ -89,10 +89,12 @@
                                     id="div_1dd7_18">
                                     <div class="gdlr-core-title-item-title-wrap clearfix">
                                         <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_10">
-                                            Sambutan Rektor POLTEKNAS</h3>
+                                            
+                                            {{ $item->title }}</h3>
+                                            
                                     </div><span
                                         class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption"
-                                        id="span_1dd7_0">Pendaftaran angkatan 2024 sudah dibuka</span>
+                                        id="span_1dd7_0">{{ $item->subtitle }}</span>
                                 </div>
                             </div>
                             <div class="gdlr-core-pbf-element">
@@ -100,24 +102,7 @@
                                     id="div_1dd7_19">
                                     <div class="gdlr-core-text-box-item-content" id="div_1dd7_12"
                                         style="text-align: justify">
-                                        <p>Politeknik Pengadaan Nasional merupakan Kampus Vokasi pertama di
-                                            Indonesia yang semua prodinya diberikan bidang ilmu Pengadaan
-                                            Barang/Jasa. Khusus untuk Prodi Manajemen Kontrak Pemerintah mata
-                                            kuliahnya full Pengadaan Barang/Jasa Pemerintah. Selain itu Politeknik
-                                            Pengadaan Nasional juga membuka Program Studi Bisnis Digital dan Program
-                                            Studi Paralegal.
-                                            Pendirian Politeknik Pengadaan Nasional mendapat dukungan dari Lembaga
-                                            Kebijakan Pengadaan Barang/Jasa Pemerintah (LKPP), Pemerintah Daerah,
-                                            Pengadilan Tinggi/Negeri, Perusahaan Swasta ternama sehingga dapat
-                                            memberikan peluang kerja sesuai dengan minat dan kompetensinya Tenaga
-                                            pengajar berasal dari berbagai disiplin ilmu seperti lImu Hukum,
-                                            Magister Manajemen, lImu Pemerintahan, IT dan Teknik. Selain itu tenaga
-                                            pengajar juga berasal dari praktisi LKPP, POLRI, Pengadilan dan Aparat
-                                            Penegak Hukum Lainnya. Semua lulusan Politeknik Pengadaan Nasional
-                                            sangat kompeten dibidang pengadaan, yang memiliki sertifikat Ahli
-                                            Pengadaan Barang/Jasa Pemerintah Level 1 dan sertifikat Ahli K3 Umum
-                                            Kemnaker sehingga benar-benar siap pakai untuk bekerja baik di instansi
-                                            pemerintah maupun swasta.</p>
+                                        <p>{{$item->message}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -125,10 +110,11 @@
                                 <div
                                     class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                     <a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border"
-                                        href="#" id="a_1dd7_0"><span class="gdlr-core-content">Daftar
+                                        href="{{$item->buttonlink}}" id="a_1dd7_0"><span class="gdlr-core-content">Daftar
                                             Sekarang</span></a>
                                 </div>
                             </div>
+                            @endforeach 
                         </div>
                     </div>
                 </div>

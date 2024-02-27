@@ -47,7 +47,7 @@ class Settings extends Model
         'zoom_level'  => 'nullable',
         'latitude'    => 'nullable',
         'longitude'   => 'nullable',
-        'photo'     => 'max:6000|mimes:jpg,jpeg,png,bmp',
+        'photo'     => 'max:6000|mimes:jpg,jpeg,png,bmp,mp4',
     ];
 
     static public $messages = [];
