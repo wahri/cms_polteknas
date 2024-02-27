@@ -48,6 +48,8 @@
     @if (config('app.env') != 'local')
         @include('partials.facebook')
     @endif
+
+    @include('website.partials.mobile_header')
     <div class="kingster-body-outer-wrapper ">
         <div class="kingster-body-wrapper clearfix  kingster-with-frame">
             @include('website.partials.header')
