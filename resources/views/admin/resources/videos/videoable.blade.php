@@ -240,7 +240,7 @@
             // autodiscover was turned off - update the settings
             var videoDropzone = new Dropzone("#formVideoDropzone");
             videoDropzone.options.maxFiles = "5";
-            videoDropzone.options.maxFilesize = "5";
+            videoDropzone.options.maxFilesize = "10";
             videoDropzone.options.paramName = "file";
             videoDropzone.previewTemplate = $('#preview-template').html();
             videoDropzone.on("success", function (file, response) {

@@ -191,7 +191,7 @@
             // autodiscover was turned off - update the settings
             var photoDropzone = new Dropzone("#formPhotoDropzone");
             photoDropzone.options.maxFiles = "10";
-            photoDropzone.options.maxFilesize = "5";
+            photoDropzone.options.maxFilesize = "10";
             photoDropzone.options.paramName = "file";
             photoDropzone.previewTemplate = $('#preview-template').html();
             photoDropzone.on("success", function (file, response) {
