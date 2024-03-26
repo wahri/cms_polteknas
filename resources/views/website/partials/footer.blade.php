@@ -6,7 +6,20 @@
                     <div class="textwidget">
                         <p><img src="{{ asset('images/logopolpengnaswhite.png') }}" alt="" />
                             <br /> <span class="gdlr-core-space-shortcode" id="span_1dd7_10"></span>
-                            <br />
+                            
+                            @if (isset($settings->instagram))
+                            <a href="https://instagram.com/{{ $settings->instagram }}"> <i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a> 
+                            @endif
+                            @if (isset($settings->facebook))
+                            <a href="https://facebook.com/{{ $settings->facebook }}"> <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a> 
+                            @endif
+                            @if (isset($settings->twitter))
+                            <a href="https://twitter.com/{{ $settings->twitter }}"> <i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> 
+                            @endif
+                            @if (isset($settings->youtube))
+                            <a href="https://youtube.com/{{ $settings->youtube }}"> <i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a> 
+                            @endif
+                            <br/>
                             @if (isset($settings->address))
                                 <strong class="sr-only">Physical Address</strong> {{ $settings->address }}
                             @endif
