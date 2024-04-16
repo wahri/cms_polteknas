@@ -41,22 +41,22 @@
                                                     </div>
                                                 @endif
                                                 @if (!$banner->hide_name)
-                                                    <div class="tp-caption   tp-resizeme" id="slide-1-layer-2"
-                                                        data-x="33" data-y="center" data-voffset="-31"
+                                                    <div class="tp-caption tp-resizeme" id="slide-1-layer-2"
+                                                        data-x="center" data-y="center" data-voffset="-31"
                                                         data-width="['auto']" data-height="['auto']" data-type="text"
                                                         data-responsive_offset="on"
                                                         data-frames='[{"delay":370,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                                         data-textAlign="['inherit','inherit','inherit','inherit']"
                                                         data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
                                                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                                                        style="z-index: 6; white-space: nowrap; font-size: 83px; line-height: 83px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Poppins;">
+                                                        style="z-index: 6; white-space: nowrap; font-size: 83px; line-height: 83px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Poppins; background-color:#2d2d2d7e;">
                                                         {!! $banner->name !!}
                                                     </div>
                                                 @endif
                                                 @if ($banner->action_url)
                                                     <a href="{{ $banner->action_url }}" target="_blank"
                                                         class="tp-caption rev-btn rev-hiddenicon " id="slide-1-layer-6"
-                                                        data-x="34" data-y="center" data-voffset="80"
+                                                        data-x="center" data-y="center" data-voffset="80"
                                                         data-width="['auto']" data-height="['auto']" data-type="button"
                                                         data-responsive_offset="on"
                                                         data-frames='[{"delay":740,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(0,64,132);bg:rgba(255,255,255,1);bw:0 0 0 5px;"}]'
@@ -72,7 +72,8 @@
                                             </li>
                                         @endforeach
                                     </ul>
-                                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;">
+                                    </div>
                                 </div>
 
                             </div>
