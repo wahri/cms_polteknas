@@ -330,35 +330,13 @@
                                         </div>
                                     </div>
                                     <p> <b>Visi:</b>
-                                    <p>"Menjadi pusat keunggulan akademik yang diakui secara global, mendorong
-                                        inovasi, keberlanjutan, dan pemberdayaan masyarakat."</p>
+                                    <p>"Menjadi Kampus Vokasi Unggul, Kompeten, Inovatif dan Bermartabat di Tingkat Nasional maupun Internasional."</p>
                                     <p><b>Misi:</b>
-                                    <p>1. Menyediakan pendidikan berkualitas tinggi yang mempersiapkan siswa untuk
-                                        menjadi pemimpin masa depan dalam berbagai disiplin ilmu.
-                                    <p>2. Mendorong penelitian dan inovasi yang berdampak positif bagi masyarakat
-                                        lokal, regional, dan global.
+                                    <p>1. Menyelenggarakan pendidikan untuk menghasilkan lulusan yang kompeten, memiliki inovasi, semangat juang dan daya saing yang tinggi
+                                    <p>2. Menciptakan budaya akademik yang berakhlak, bermartabat dan berkarakter
                                     </p>
-                                </div>
-                                <div class="gdlr-core-tab-item-content " data-tab-id="4">
-                                    <div
-                                        class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
-                                        <div class="gdlr-core-title-item-title-wrap ">
-                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_1dd7_27">
-                                                Prabowo Subianto<span
-                                                    class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
-                                            </h3>
-                                        </div>
-                                    </div>
-                                    <p>"Sebagai seorang Alumni Politeknik Pengadaan Nasional, saya tidak bisa cukup
-                                        menekankan betapa berharganya pengalaman saya di sini. Dari fakultas yang
-                                        berdedikasi hingga kurikulum yang menantang, universitas ini benar-benar
-                                        membantu saya tumbuh sebagai individu dan profesional. Saya merasa sangat
-                                        bersyukur telah menjadi bagian dari komunitas yang beragam ini. Pengalaman
-                                        saya di Politeknik Pengadaan Nasional telah membuka pintu untuk peluang
-                                        karir yang luar biasa dan hubungan yang tak terlupakan. Saya akan selalu
-                                        bangga menjadi bagian dari universitas ini dan merekomendasikannya kepada
-                                        siapa pun yang mencari pengalaman pendidikan yang luar biasa."</p>
-
+                                    <p>3. Melaksanakan penelitian dan pengabdian yang mengembangkan ilmu pengetahuan, teknologi, bisnis terapan, dan jiwa kewirausahaan</p>
+                                    <p>4. Pemberian kesempatan belajar bagi masyarakat Indonesia khususnya Propinsi Riau yang berprestasi, semangat tinggi tetapi kurang mampu</p>
                                 </div>
                             </div>
                         </div>
