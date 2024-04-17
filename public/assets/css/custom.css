@@ -1,0 +1,32 @@
+@media only screen and (max-width: 1199.98px) {
+    .gdlr-core-column-10,
+    .gdlr-core-column-12,
+    .gdlr-core-column-15,
+    .gdlr-core-column-20,
+    .gdlr-core-column-24,
+    .gdlr-core-column-30,
+    .gdlr-core-column-36,
+    .gdlr-core-column-40,
+    .gdlr-core-column-45,
+    .gdlr-core-column-48,
+    .gdlr-core-column-50,
+    .gdlr-core-column-60 {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .gdlr-core-column-10,
+    .gdlr-core-column-12,
+    .gdlr-core-column-15,
+    .gdlr-core-column-20,
+    .gdlr-core-column-24,
+    .gdlr-core-column-30,
+    .gdlr-core-column-36,
+    .gdlr-core-column-40,
+    .gdlr-core-column-45,
+    .gdlr-core-column-48,
+    .gdlr-core-column-50,
+    .gdlr-core-column-60 {
+        width: 100%;
+    }
+}
