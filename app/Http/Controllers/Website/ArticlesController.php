@@ -20,10 +20,11 @@ class ArticlesController extends WebsiteController
         } else {
             $items = Article::whereHas('photos')->with('photos')->isActiveDates()->orderBy('active_from', 'DESC')->get();
         }
+        $articleCategory = ArticleCategory::All();
 
-        $perPage = 6;
-        $page = input('page', 1);
-        $baseUrl = config('app.url') . '/articles/' . $categorySlug;
+        $perPage = 5;
+        $page = input('halaman', 1);
+        $baseUrl = config('app.url') . '/berita/' . $categorySlug;
 
 
         $total = $items->count();
@@ -44,11 +45,15 @@ class ArticlesController extends WebsiteController
                 ->render());
         }
 
-        return $this->view('articles.index')->with('paginator', $paginator);
+
+        return $this->view('articles.index')
+        ->with('paginator', $paginator)
+        ->with('articleCategory', $articleCategory)
+        ->with('withBanners', false);
     }
 
     /**
-     * Show Article and Events
+     * Show Article and Events  
      * @param $categorySlug
      * @param $articleSlug
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
@@ -63,7 +68,8 @@ class ArticlesController extends WebsiteController
         }
 
         $this->title = $item->name;
-
+        $this->description = $item->summary;
+        $this->image = '/uploads/images/' . $item->photos->first()->filename;
 
         return $this->view('articles.show')
         ->with('article', $item)

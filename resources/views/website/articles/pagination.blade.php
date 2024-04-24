@@ -1,5 +1,5 @@
 <div class="pagination-box">
-    <div class="row pb-3">
+    <div class="pb-3 row">
         @foreach($paginator as $item)
             <div class="col-12 col-lg-6">
                 <div class="card h-100">
@@ -9,7 +9,7 @@
                         <p class="card-text">{!! $item->summary !!}</p>
 
                     </div>
-                    <div class="card-footer bg-white d-flex justify-content-between align-items-center border-top">
+                    <div class="bg-white card-footer d-flex justify-content-between align-items-center border-top">
                         <div class="flex-grow-1" data-icon="far fa-calendar">
                             {!! $item->active_from->format('\<\s\t\r\o\n\g\>d\</\s\t\r\o\n\g\> M Y') !!}
                         </div>

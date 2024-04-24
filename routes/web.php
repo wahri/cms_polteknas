@@ -100,7 +100,7 @@ Route::group(['namespace' => 'Website'], function () {
             $name = $page->slug;
 
             if (isset($page->template->controller_action) && $page->template->controller_action != 'Auth') {
-                Route::get($page->url, $page->template->controller_action)->name($name);
+                Route::get($page->url.$page->url_parameter, $page->template->controller_action)->name($name);
             }
             else if(!isset($page->template->controller_action)){
                 Route::get($page->url, 'PagesController@index')->name($name);

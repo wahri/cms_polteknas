@@ -35,6 +35,13 @@ Route::group(['middleware' => ['auth', 'auth.admin'], 'prefix' => 'admin', 'name
         Route::resource('/banners', 'BannersController');
     });
 
+    // announcement
+    Route::prefix('homepage')->namespace('Announcements')->group(function () {
+        Route::get('/announcement/order', 'OrderController@index');
+        Route::post('/announcement/order', 'OrderController@update');
+        Route::resource('/announcement', 'AnnouncementsController');
+    });
+
     // faq
     Route::namespace('FAQ')->group(function () {
         Route::resource('/faqs/categories', 'CategoriesController')

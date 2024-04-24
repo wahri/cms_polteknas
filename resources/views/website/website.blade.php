@@ -17,7 +17,7 @@
     <meta property="fb:app_id" name="fb:app_id" content="{{ config('app.facebook_id') }}" />
     <meta property="og:title" name="og:title" content="{{ $title ?? config('app.title') }}">
     <meta property="og:description" name="og:description" content="{{ $description ?? config('app.description') }}">
-    <meta property="og:image" name="og:image" content="{{ config('app.url') }}{{ $image ?? '/images/logo.png' }}">
+    <meta property="og:image" name="og:image" content="{{ config('app.url') }}{{ $image ?? '/images/home/logo.png' }}">
 
     <link rel="shortcut icon" type="image/ico" href="{{ asset('images/home/logo.png') }}">
 

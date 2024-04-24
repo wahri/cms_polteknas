@@ -43,7 +43,8 @@
                             style="padding-bottom: 40px ;">
                             <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle"
                                 style="border-width: 0px;"><img src="{{ $article->cover_photo->url }}" width="1000"
-                                    height="365" alt="{{ $article->cover_photo->name }}" style="max-height: 300px; object-fit: contain" /></div>
+                                    height="365" alt="{{ $article->cover_photo->name }}"
+                                    style="max-height: 300px; object-fit: contain" /></div>
                         </div>
                     </div>
                 @endif
