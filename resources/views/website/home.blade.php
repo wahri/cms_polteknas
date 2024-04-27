@@ -53,6 +53,7 @@
             </div>
         </div>
     @endif
+    
     <div class="gdlr-core-pbf-wrapper " id="gdlr-core-wrapper-2" style="padding:0px">
         <div class="gdlr-core-pbf-background-wrap">
             <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_1dd7_13"
@@ -212,6 +213,7 @@
             </div>
         </div>
     @endif
+
     <div class="gdlr-core-pbf-wrapper " id="div_1dd7_30" data-skin="Column Service">
         <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_31"></div>
         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
@@ -327,6 +329,7 @@
             </div>
         </div>
     </div>
+
     <div class="gdlr-core-pbf-wrapper " id="div_1dd7_79">
         <div class="gdlr-core-pbf-background-wrap" id="div_1dd7_80"></div>
         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
@@ -440,7 +443,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="gdlr-core-pbf-wrapper " id="div_1dd7_72">
         <div class="gdlr-core-pbf-background-wrap">
