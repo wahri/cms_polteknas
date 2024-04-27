@@ -8,14 +8,14 @@
                     @if(!isset($item->filename))
                         <figure>
                             <iframe width="315" height="177" src="@if($item->is_youtube) {{ 'https://www.youtube.com/embed/'.$item->link}} @else {{ $item->link }} @endif" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <figcaption>{!! $item->name !!}</figcaption>
+                            <figcaption style="text-align: center">{!! $item->name !!}</figcaption>
                         </figure>
                     @else
                         <figure id="video-viewport">
                             <video id="video-{{$item->id}}" width="315px" height="177px" preload="auto" controls muted="" src="{{$item->url}}">
                                 <source src="{{$item->url}}" type="video/mp4">
                             </video>
-                            <figcaption>{!! $item->name !!}</figcaption>
+                            <figcaption style="text-align: center">{!! $item->name !!}</figcaption>
                         </figure>
                     @endif
 
